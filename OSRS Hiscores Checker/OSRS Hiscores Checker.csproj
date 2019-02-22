@@ -6,4 +6,14 @@
     <RootNamespace>OSRS_Hiscores_Checker</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Speedometer" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CheckingLib">
+      <HintPath>..\..\..\Projects\CheckingLib\CheckingLib\bin\Release\netstandard2.0\CheckingLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
