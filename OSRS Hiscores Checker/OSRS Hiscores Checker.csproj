@@ -6,10 +6,4 @@
     <RootNamespace>OSRS_Hiscores_Checker</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Reference Include="CheckingLib">
-      <HintPath>..\..\..\Projects\CheckingLib\CheckingLib\bin\Release\netstandard2.0\CheckingLib.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
