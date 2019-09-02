@@ -18,7 +18,7 @@ namespace OSRS_Hiscores_Checker
         private static bool finished = false;
         private static int threadsFinished = 0;
 
-        private static Speedometer.Speedometer speedometer;
+        private static Speedometer speedometer;
         private static int totalUsers;
         private static int errorsCount = 0;
 
@@ -104,7 +104,7 @@ namespace OSRS_Hiscores_Checker
 
             Task[] tasks = new Task[config.Threads];
             Console.WriteLine($"Starting {config.Threads} threads.");
-            speedometer = new Speedometer.Speedometer();
+            speedometer = new Speedometer();
             speedometer.Start();
             UpdateStatus();
 
@@ -145,7 +145,7 @@ namespace OSRS_Hiscores_Checker
                 try
                 {
                     checker.Variables["USERNAME"] = user.Username;
-                    String text = await checker.ExecuteAsync(step);
+                    String text = (await checker.ExecuteAsync(step)).Body;
                     if(text.Contains("Page not found"))
                     {
                         errorsCount++;
